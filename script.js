@@ -45,22 +45,34 @@
 // const birthYear = 1991;
 
 //second coding challenge
-let markWeight = 78;
-let johnWeight = 92;
+// let markWeight = 78;
+// let johnWeight = 92;
 
-let markHeight = 1.69;
-let johnHeight = 1.95;
+// let markHeight = 1.69;
+// let johnHeight = 1.95;
 
-//calculate the BMI
-let markBMI = markWeight / (markHeight ** 2);
-let johnBMI = johnWeight / (johnHeight ** 2);
+// //calculate the BMI
+// let markBMI = markWeight / (markHeight ** 2);
+// let johnBMI = johnWeight / (johnHeight ** 2);
 
-console.log(markBMI,johnBMI);
-//check if makrj bmi is higher than John 
-let isMarkBMIGreater = markBMI > johnBMI;
-if(isMarkBMIGreater){
-    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
-}else{
-      console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})`);
-}
+// console.log(markBMI,johnBMI);
+// //check if makrj bmi is higher than John 
+// let isMarkBMIGreater = markBMI > johnBMI;
+// if(isMarkBMIGreater){
+//     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
+// }else{
+//       console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})`);
+// }
+
+//Type conversion
+let inputYear = '1991';
+console.log(Number(inputYear));
+console.log(inputYear + 20);
+
+let age =18;
+if(age === 18) console.log('You just became an adult');
+
+let favorite = prompt('What is your favorite number?');
+console.log(favorite);
+console.log(typeof favorite);
 
