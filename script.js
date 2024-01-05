@@ -65,14 +65,49 @@
 // }
 
 //Type conversion
-let inputYear = '1991';
-console.log(Number(inputYear));
-console.log(inputYear + 20);
+// let inputYear = '1991';
+// console.log(Number(inputYear));
+// console.log(inputYear + 20);
 
-let age =18;
-if(age === 18) console.log('You just became an adult');
+// let age =18;
+// if(age === 18) console.log('You just became an adult');
 
-let favorite = prompt('What is your favorite number?');
-console.log(favorite);
-console.log(typeof favorite);
+// let favorite = prompt('What is your favorite number?');
+// console.log(favorite);
+// console.log(typeof favorite);
+//switch case
+// const day = 'monday';
 
+// switch(day){
+//     case 'monday':
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('Write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Do some sports');
+//     default:
+//         console.log('Not a valid day!');
+// }
+
+//ternary operator
+let age = 23;
+age >=18 ? console.log('I am an adult and can drive🍷'):
+console.log('I am a child and I cannot drive');
+
+
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink);
+
+
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`); 
