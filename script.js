@@ -1,21 +1,42 @@
 'use strict';
+
+//arrow functions
+const calcAge3 = birthYear => 2024 - birthYear;
+const age3 = calcAge3(2000);
+console.log(age3);
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // function declaration are use when we used the function keyword
-function calcAge1(birthYear){
-    return 2024 - birthYear;
+// function calcAge1(birthYear){
+//     return 2024 - birthYear;
 
-}
+// }
 
-const age1 = calcAge1(1991);
+// const age1 = calcAge1(1991);
 
-console.log(age1);
+// console.log(age1);
 
 
-const calcAge2 = function(birthYear){
-    return 2024 - birthYear;
-}
+// const calcAge2 = function(birthYear){
+//     return 2024 - birthYear;
+// }
 
-const age2= calcAge2(1991);
-console.log(age2);
+// const age2= calcAge2(1991);
+// console.log(age2);
 
 
 
