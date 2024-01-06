@@ -1,3 +1,53 @@
+'use strict';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// strict mode
+// let hasDriversLicense = false;
+// const passTest = true;
+// if(passTest){
+//     hasDriversLicense = true;
+// }
+
+
+// if (hasDriversLicense) console.log('I can drive :D');
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // console.log('Jonas');
 
 // let firstname = 'Fomonyuytar';
@@ -6,7 +56,6 @@
 // let age = 30;
 // age =12;
 // lastName= 'Joseph'
-
 
 // let markWeight = 78;
 // let johnWeight = 92;
@@ -19,7 +68,7 @@
 // let johnBMI = johnWeight / (johnHeight ** 2);
 
 // console.log(markBMI,johnBMI);
-// //check if makrj bmi is higher than John 
+// //check if makrj bmi is higher than John
 // console.log(markBMI > johnBMI);
 
 //template literal
@@ -56,7 +105,7 @@
 // let johnBMI = johnWeight / (johnHeight ** 2);
 
 // console.log(markBMI,johnBMI);
-// //check if makrj bmi is higher than John 
+// //check if makrj bmi is higher than John
 // let isMarkBMIGreater = markBMI > johnBMI;
 // if(isMarkBMIGreater){
 //     console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
@@ -101,13 +150,11 @@
 // }
 
 //ternary operator
-let age = 23;
-age >=18 ? console.log('I am an adult and can drive🍷'):
-console.log('I am a child and I cannot drive');
+// let age = 23;
+// age >=18 ? console.log('I am an adult and can drive🍷'):
+// console.log('I am a child and I cannot drive');
 
+// const drink = age >= 18 ? 'wine' : 'water';
+// console.log(drink);
 
-const drink = age >= 18 ? 'wine' : 'water';
-console.log(drink);
-
-
-console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`); 
+// console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`);
