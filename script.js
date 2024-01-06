@@ -1,23 +1,59 @@
 'use strict';
+// function declaration are use when we used the function keyword
+function calcAge1(birthYear){
+    return 2024 - birthYear;
 
-function logger (){
-    console.log('My name is Joseph');
 }
 
+const age1 = calcAge1(1991);
 
-//calling, running or invoking function
-logger();
+console.log(age1);
 
 
-function fruitProcessor (apples , oranges){
-    console.log(apples , oranges);
-const juice = `Juice with ${apples} apples and ${oranges} oranges`;
-return juice;
+const calcAge2 = function(birthYear){
+    return 2024 - birthYear;
+}
+
+const age2= calcAge2(1991);
+console.log(age2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function logger (){
+//     console.log('My name is Joseph');
+// }
+
+
+// //calling, running or invoking function
+// logger();
+
+
+// function fruitProcessor (apples , oranges){
+//     console.log(apples , oranges);
+// const juice = `Juice with ${apples} apples and ${oranges} oranges`;
+// return juice;
      
-}
+// }
 
-const appleJuice =fruitProcessor(5,2);
-console.log(appleJuice);
+// const appleJuice =fruitProcessor(5,2);
+// console.log(appleJuice);
 
 
 
