@@ -1,9 +1,30 @@
 'use strict';
+//objects
+
+const joseph ={
+    firstName: 'Joseph',
+    lastName:"josad",
+    age:2030-2000,
+    job:'teacher',
+    friends:['James','Peter','John']
+};
+
+
+console.log(joseph);
+console.log(joseph.lastName);
+console.log(joseph['firstName']);
+
+// arrays
+// const friends = ['Micheal', 'Steven', 'Joseph'];
+
+// const years = new Array(1991 ,1432, 2030 ,2022);
+// console.log(friends);
+// console.log(years);
 
 //arrow functions
-const calcAge3 = birthYear => 2024 - birthYear;
-const age3 = calcAge3(2000);
-console.log(age3);
+// const calcAge3 = birthYear => 2024 - birthYear;
+// const age3 = calcAge3(2000);
+// console.log(age3);
 
 
  
