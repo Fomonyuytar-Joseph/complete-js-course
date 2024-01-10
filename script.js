@@ -1,18 +1,35 @@
 'use strict';
 //objects
 
-const joseph ={
-    firstName: 'Joseph',
-    lastName:"josad",
-    age:2030-2000,
-    job:'teacher',
-    friends:['James','Peter','John']
+// const joseph ={
+//     firstName: 'Joseph',
+//     lastName:"josad",
+//     birthYear:2000,
+//     job:'teacher',
+//     friends:['James','Peter','John'],
+//     hasDriversLicense:true,
+//     calcAge: function (){
+//         this.age = 2024 - this.birthYear
+//         return this.age;
+      
+//     }
+    // calcAge: function (){
+    //     // console.log(this);
+    //     return 2024 - this.birthYear;
+      
+    // }
 };
 
 
-console.log(joseph);
-console.log(joseph.lastName);
-console.log(joseph['firstName']);
+console.log(joseph.calcAge());
+console.log(joseph.age);
+
+// console.log(joseph.age);
+// console.log(joseph['calcAge'](2000));
+
+// console.log(joseph);
+// console.log(joseph.lastName);
+// console.log(joseph['firstName']);
 
 // arrays
 // const friends = ['Micheal', 'Steven', 'Joseph'];
