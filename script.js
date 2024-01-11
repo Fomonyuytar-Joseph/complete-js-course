@@ -1,4 +1,60 @@
 'use strict';
+
+//for loop
+
+
+const joseph = ['Fomonyuytar','Joseph',2030,'programmer',['peter','James','John'],true]
+
+let types =[];
+
+
+
+// for (let i = 0; i<joseph.length ;i++){
+//     console.log(joseph[i] ,typeof joseph[i]);
+
+//     //filling types of arrays
+//     // types[i]= typeof joseph[i];
+
+//     types.push(typeof joseph[i]);
+// }
+
+
+// console.log(types);
+
+
+const years = [1991,2007,1945,2003];
+
+const birthYear=[];
+
+for (let i = 0; i<years.length ;i++){
+    birthYear.push(2024-years[i]);
+}
+
+
+console.log(birthYear);
+
+//continue and break 
+// console.log('--- ONLY STRINGS ---');      
+// for (let i = 0; i < joseph.length; i++) {
+//     if(typeof joseph[i] !== 'string') continue;
+//   types.push(typeof joseph[i]);
+
+// }
+
+
+//continue and break 
+console.log('--- BREAK WITH NUMBER ---');      
+for (let i = 0; i < joseph.length; i++) {
+    if(typeof joseph[i] === 'number') break;
+  types.push(typeof joseph[i]);
+
+}
+
+
+console.log(types);
+
+
+
 //objects
 
 // const joseph ={
@@ -18,11 +74,11 @@
     //     return 2024 - this.birthYear;
       
     // }
-};
+// };
 
 
-console.log(joseph.calcAge());
-console.log(joseph.age);
+// console.log(joseph.calcAge());
+// console.log(joseph.age);
 
 // console.log(joseph.age);
 // console.log(joseph['calcAge'](2000));
