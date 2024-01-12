@@ -5,8 +5,24 @@
 
 const joseph = ['Fomonyuytar','Joseph',2030,'programmer',['peter','James','John'],true]
 
-let types =[];
+// let types =[];
 
+// looping backawards
+for(let i= joseph.length-1; i>=0;i--){
+    console.log(i, joseph[i]);
+}
+
+
+//loops inside a loop
+
+for (let exercise =1 ; exercise<4 ; exercise ++){
+    console.log(`--------Starting exercise ${exercise}`);   
+
+    for (let rep = 1;rep < 6;rep++){
+        console.log(`Lifting ${exercise} weight repetition ${rep} 🏋️` );
+    }
+
+}
 
 
 // for (let i = 0; i<joseph.length ;i++){
@@ -22,16 +38,16 @@ let types =[];
 // console.log(types);
 
 
-const years = [1991,2007,1945,2003];
+// const years = [1991,2007,1945,2003];
 
-const birthYear=[];
+// const birthYear=[];
 
-for (let i = 0; i<years.length ;i++){
-    birthYear.push(2024-years[i]);
-}
+// for (let i = 0; i<years.length ;i++){
+//     birthYear.push(2024-years[i]);
+// }
 
 
-console.log(birthYear);
+// console.log(birthYear);
 
 //continue and break 
 // console.log('--- ONLY STRINGS ---');      
@@ -43,15 +59,15 @@ console.log(birthYear);
 
 
 //continue and break 
-console.log('--- BREAK WITH NUMBER ---');      
-for (let i = 0; i < joseph.length; i++) {
-    if(typeof joseph[i] === 'number') break;
-  types.push(typeof joseph[i]);
+// console.log('--- BREAK WITH NUMBER ---');      
+// for (let i = 0; i < joseph.length; i++) {
+//     if(typeof joseph[i] === 'number') break;
+//   types.push(typeof joseph[i]);
 
-}
+// }
 
 
-console.log(types);
+// console.log(types);
 
 
 
