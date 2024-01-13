@@ -5,24 +5,49 @@
 
 const joseph = ['Fomonyuytar','Joseph',2030,'programmer',['peter','James','John'],true]
 
-// let types =[];
-
-// looping backawards
-for(let i= joseph.length-1; i>=0;i--){
-    console.log(i, joseph[i]);
-}
+    // for (let rep = 1;rep <= 10;rep++){
+    //     console.log(`Lifting weight repetition ${rep} 🏋️` );
+    // }
 
 
-//loops inside a loop
+    // let rep =1;
+    // while(rep<=10){
+    //       console.log(`Lifting weight repetitions ${rep} 🏋️`);
 
-for (let exercise =1 ; exercise<4 ; exercise ++){
-    console.log(`--------Starting exercise ${exercise}`);   
+    //       rep++;
 
-    for (let rep = 1;rep < 6;rep++){
-        console.log(`Lifting ${exercise} weight repetition ${rep} 🏋️` );
+    // }
+
+
+    //roll a dice until we get a 6
+    let dice = Math.trunc(Math.random()*6)+1 ;
+
+    while (dice !==6){
+        console.log(`You rolled a ${dice}`);
+         dice = Math.trunc(Math.random() * 6) + 1;
+        if(dice === 6){
+            console.log('Loop is about to end...');
+        }
     }
 
-}
+// let types =[];
+
+// // looping backawards
+// for(let i= joseph.length-1; i>=0;i--){
+//     console.log(i, joseph[i]);
+// }
+
+
+// //loops inside a loop
+
+// for (let exercise =1 ; exercise<4 ; exercise ++){
+//     console.log(`--------Starting exercise ${exercise}`);   
+
+//     for (let rep = 1;rep < 6;rep++){
+//         console.log(`Lifting ${exercise} weight repetition ${rep} 🏋️` );
+//     }
+
+// }
 
 
 // for (let i = 0; i<joseph.length ;i++){
