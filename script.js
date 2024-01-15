@@ -1,7 +1,3 @@
 'use strict';
 
-const x = '23';
-
-const calcAge = birthYear => 2024 - birthYear;
-
-console.log();
+console.log(document.querySelector('.message').textContent);
