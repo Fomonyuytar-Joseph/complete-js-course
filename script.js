@@ -30,7 +30,7 @@ Person.prototype.calcAge=function(){
 
 
 joseph.calcAge();
-console.log(joseph.__proto__);
+
 console.log(joseph);
 console.log(Person.prototype.isPrototypeOf(joseph));
 
@@ -40,6 +40,8 @@ console.log(Person.prototype.isPrototypeOf(joseph));
 Person.prototype.species = 'Homo sapiens';
 console.log(joseph.species);
 console.log(joseph.hasOwnProperty('firstName'));
+console.log(joseph.__proto__.__proto__);
+console.log(joseph.__proto__.constructor );
 //Homo sapiens
 
 
