@@ -1,7 +1,63 @@
 'use strict';
 
+class Account {
+  constructor(owner,currency,pin){
+    this.owner = owner;
+    this.currency = currency;
+    this._pin = pin;
+    //protected property
+    this._movements=[];
+    this.locale=navigator.language;
+     console.log(`Thanks for opening an account: ${this.owner}`);
+}
 
 
+//public interface
+getMovements(){
+  return this._movements;
+}
+
+
+getPIN(){
+  return this._pin;
+}
+
+
+//public interface 
+deposit(val){
+  this._movements.push(val)
+}
+
+withdraw(val){
+  this.deposit(-val)
+}
+
+_approveLoan(val){
+  return true;
+}
+
+
+requestLoan(val){
+  if(this.approveLoan(val)){
+    this.deposit(val);
+    console.log(`loan approved of ${this.val} cfa`);
+  }
+}
+
+
+}
+
+const acc1 = new Account('Joseph','CFA',1111);
+acc1.deposit(250);
+acc1.withdraw(140);
+acc1._approveLoan(1323);
+acc1.requestLoan(1000);
+
+console.log(acc1.getMovements());
+
+console.log(acc1);
+
+console.log(acc1._pin);
 
 
 
