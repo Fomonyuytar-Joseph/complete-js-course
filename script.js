@@ -1,89 +1,64 @@
 'use strict';
 
 class Account {
-  constructor(owner,currency,pin){
+  constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
     this._pin = pin;
     //protected property
-    this._movements=[];
-    this.locale=navigator.language;
-     console.log(`Thanks for opening an account: ${this.owner}`);
-}
+    this._movements = [];
+    this.locale = navigator.language;
+    console.log(`Thanks for opening an account: ${this.owner}`);
+  }
 
+  //public interface
+  getMovements() {
+    return this._movements;
+  }
 
-//public interface
-getMovements(){
-  return this._movements;
-}
+  getPIN() {
+    return this._pin;
+  }
 
+  //public interface
+  deposit(val) {
+    this._movements.push(val);
+    return this;
+  }
 
-getPIN(){
-  return this._pin;
-}
+  withdraw(val) {
+    this.deposit(-val);
+    return this;
+  }
 
+  _approveLoan(val) {
+    return true;
+  }
 
-//public interface 
-deposit(val){
-  this._movements.push(val)
-}
-
-withdraw(val){
-  this.deposit(-val)
-}
-
-_approveLoan(val){
-  return true;
-}
-
-
-requestLoan(val){
-  if(this.approveLoan(val)){
-    this.deposit(val);
-    console.log(`loan approved of ${this.val} cfa`);
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log(`loan approved of ${this.val} cfa`);
+      return this;
+    }
   }
 }
 
-
-}
-
-const acc1 = new Account('Joseph','CFA',1111);
-acc1.deposit(250);
-acc1.withdraw(140);
-acc1._approveLoan(1323);
-acc1.requestLoan(1000);
-
+const acc1 = new Account('Joseph', 'CFA', 1111);
+acc1.deposit(300).deposit(500).withdraw(50).requestLoan(300);
 console.log(acc1.getMovements());
+// acc1.deposit(250);
+// acc1.withdraw(140);
+// acc1._approveLoan(1323);
+// acc1.requestLoan(1000);
 
-console.log(acc1);
+// console.log(acc1.getMovements());
+
+// console.log(acc1);
 
 console.log(acc1._pin);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+acc
 
 // class Person {
 //   constructor(firstName, birthYear) {
@@ -98,7 +73,6 @@ console.log(acc1._pin);
 
 // }
 
-
 // class Student extends Person{
 //     constructor(firstName,birthYear,course){
 //       //aLways needs to happen first the  call to parent class constructor then we can access the this keyword
@@ -110,31 +84,14 @@ console.log(acc1._pin);
 //       console.log(`My first name is ${this.firstName} and I study ${this.course}`);
 //     }
 
-
 //     calcAge(){
 //       console.log(`I feel ${2037- this.birthYear} today`);
 //     }
 // }
 
-
 // const max = new Student('Max',2013,'Physics');
 // console.log(max);
 // max.calcAge();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // const Person =  function(firstName,birthYear){
 //     this.firstName = firstName;
@@ -142,11 +99,9 @@ console.log(acc1._pin);
 
 // }
 
-
 // Person.prototype.calcAge=function(){
 //     console.log(2024 - this.birthYear);
 // }
-
 
 // const Student = function(firstName,birthYear,course){
 //    Person.call(this,firstName,birthYear);
@@ -154,24 +109,17 @@ console.log(acc1._pin);
 
 // }
 
-
 // Student.prototype=Object.create(Person.prototype);
-
 
 // Student.prototype.introduce=function(){
 //   console.log(`My name is ${this.firstName} and I study ${this.course}`);
 // }
 
-
 // const joe = new Student('Joe',2003,'Math');
-
 
 // console.log(joe);
 // joe.calcAge();
 // joe.introduce();
-
-
-
 
 //Getters and setters
 // const account ={
@@ -188,14 +136,9 @@ console.log(acc1._pin);
 
 // }
 
-
 // console.log(account.latest);
 // account.latest=45;
 // console.log(account.movements)
-
-
-
-
 
 // class PersonCL {
 //   constructor(firstName, birthYear) {
@@ -217,15 +160,13 @@ console.log(acc1._pin);
 //   }
 // }
 
-
 // const christy = new PersonCL('Christy', 2004);
-
 
 // console.log(christy.age);
 // console.log(christy);
 // christy.calcAge();
 
-// //adding metthod manually ,the methods will be added to .prototype property 
+// //adding metthod manually ,the methods will be added to .prototype property
 // // PersonCL.prototype.greet = function () {
 // //   console.log(`Hey ${this.firstName}`);
 // // };
