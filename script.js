@@ -1,5 +1,122 @@
 'use strict';
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Person {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
+
+//   //methods will be added to .prototype property og the PersonCl class
+//   calcAge() {
+//     console.log(2024 - this.birthYear);
+//   }
+
+// }
+
+
+// class Student extends Person{
+//     constructor(firstName,birthYear,course){
+//       //aLways needs to happen first the  call to parent class constructor then we can access the this keyword
+//         super(firstName,birthYear);
+//         this.course = course;
+//     }
+
+//     introduce(){
+//       console.log(`My first name is ${this.firstName} and I study ${this.course}`);
+//     }
+
+
+//     calcAge(){
+//       console.log(`I feel ${2037- this.birthYear} today`);
+//     }
+// }
+
+
+// const max = new Student('Max',2013,'Physics');
+// console.log(max);
+// max.calcAge();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const Person =  function(firstName,birthYear){
+//     this.firstName = firstName;
+//     this.birthYear= birthYear;
+
+// }
+
+
+// Person.prototype.calcAge=function(){
+//     console.log(2024 - this.birthYear);
+// }
+
+
+// const Student = function(firstName,birthYear,course){
+//    Person.call(this,firstName,birthYear);
+//    this.course = course;
+
+// }
+
+
+// Student.prototype=Object.create(Person.prototype);
+
+
+// Student.prototype.introduce=function(){
+//   console.log(`My name is ${this.firstName} and I study ${this.course}`);
+// }
+
+
+// const joe = new Student('Joe',2003,'Math');
+
+
+// console.log(joe);
+// joe.calcAge();
+// joe.introduce();
+
+
+
+
 //Getters and setters
 // const account ={
 //   owner:'Joseph',
@@ -24,31 +141,31 @@
 
 
 
-class PersonCL {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
-    this.birthYear = birthYear;
-  }
+// class PersonCL {
+//   constructor(firstName, birthYear) {
+//     this.firstName = firstName;
+//     this.birthYear = birthYear;
+//   }
 
-  //methods will be added to .prototype property og the PersonCl class
-  calcAge() {
-    console.log(2024 - this.birthYear);
-  }
+//   //methods will be added to .prototype property og the PersonCl class
+//   calcAge() {
+//     console.log(2024 - this.birthYear);
+//   }
 
-  greeting() {
-     console.log(`Hey ${this.firstName}`);
-  }
+//   greeting() {
+//      console.log(`Hey ${this.firstName}`);
+//   }
 
-  get age(){
-    return 2024-this.birthYear;
-  }
-}
-
-
-const christy = new PersonCL('Christy', 2004);
+//   get age(){
+//     return 2024-this.birthYear;
+//   }
+// }
 
 
-console.log(christy.age);
+// const christy = new PersonCL('Christy', 2004);
+
+
+// console.log(christy.age);
 // console.log(christy);
 // christy.calcAge();
 
