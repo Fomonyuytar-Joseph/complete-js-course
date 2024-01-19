@@ -1,64 +1,163 @@
 'use strict';
 
-class Account {
-  constructor(owner, currency, pin) {
-    this.owner = owner;
-    this.currency = currency;
-    this._pin = pin;
-    //protected property
-    this._movements = [];
-    this.locale = navigator.language;
-    console.log(`Thanks for opening an account: ${this.owner}`);
-  }
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
-  //public interface
-  getMovements() {
-    return this._movements;
-  }
+let score = 20;
 
-  getPIN() {
-    return this._pin;
-  }
+document.querySelector('.number').textContent = secretNumber;
 
-  //public interface
-  deposit(val) {
-    this._movements.push(val);
-    return this;
-  }
+document.querySelector('.again').addEventListener('click', function () {
+  document.querySelector('.guess').value = '';
+  document.querySelector('.score').textContent = 20;
+  score = 20;
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
+});
 
-  withdraw(val) {
-    this.deposit(-val);
-    return this;
-  }
+//select the butto and return element and then add event listener
+document.querySelector('.check').addEventListener('click', function () {
+  const guess = Number(document.querySelector('.guess').value);
+  console.log(guess, typeof guess);
 
-  _approveLoan(val) {
-    return true;
-  }
+  //when there is no input
+  if (!guess) {
+    document.querySelector('.message').textContent = ' ⚠️ No Number';
 
-  requestLoan(val) {
-    if (this.approveLoan(val)) {
-      this.deposit(val);
-      console.log(`loan approved of ${this.val} cfa`);
-      return this;
+    //when player wins
+  } else if (guess === secretNumber) {
+    document.querySelector('.message').textContent = '🎉 Correct Number';
+    document.querySelector('body').style.backgroundColor = '#60b347';
+
+    document.querySelector('.number').style.width = '30rem';
+
+    //when guess is too high
+  } else if (guess > secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = 'Too high !⬆️';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '🔥 You lost the game !';
+      document.querySelector('.score').textContent = 0;
+    }
+
+    //when guess is too low
+  } else if (guess < secretNumber) {
+    if (score > 1) {
+      document.querySelector('.message').textContent = 'Too low !📉';
+      score--;
+      document.querySelector('.score').textContent = score;
+    } else {
+      document.querySelector('.message').textContent = '🔥 You lost the game !';
+      document.querySelector('.score').textContent = 0;
     }
   }
-}
+});
 
-const acc1 = new Account('Joseph', 'CFA', 1111);
-acc1.deposit(300).deposit(500).withdraw(50).requestLoan(300);
-console.log(acc1.getMovements());
-// acc1.deposit(250);
-// acc1.withdraw(140);
-// acc1._approveLoan(1323);
-// acc1.requestLoan(1000);
+// class Car {
+//   constructor(model, speed) {
+//     this.model = model;
+//     this.speed = speed;
+//   }
 
+//   accelerate() {
+//     this.speed += 10;
+//     console.log(`${this.model} is going at ${this.speed}km/h`);
+//   }
+//   break() {
+//     this.speed -= 10;
+//     console.log(`${this.model} is going at ${this.speed}km/h`);
+//   }
+
+//   get speedUS() {
+//     return this.speed / 1.6;
+//   }
+
+//   set speedUS(speed) {
+//     this.speed = speed * 1.6;
+//   }
+// }
+
+// class EVCar extends Car {
+//   constructor(model, speed, charge) {
+//     super(model, speed);
+//     this.charge = charge;
+//   }
+
+//   chargeBattery(chargeTo) {
+//     this.charge = chargeTo;
+//   }
+
+//   accelerate() {
+//     this.speed += 10;
+//   }
+// }
+
+// const ford = new Car('Ford',120);
+// console.log(ford.speedUS);
+// ford.speed = 50;
+// ford.accelerate();
+// ford.break();
+
+// class Account {
+//   constructor(owner, currency, pin) {
+//     this.owner = owner;
+//     this.currency = currency;
+//     this._pin = pin;
+//     //protected property
+//     this._movements = [];
+//     this.locale = navigator.language;
+//     console.log(`Thanks for opening an account: ${this.owner}`);
+//   }
+
+//   //public interface
+//   getMovements() {
+//     return this._movements;
+//   }
+
+//   getPIN() {
+//     return this._pin;
+//   }
+
+//   //public interface
+//   deposit(val) {
+//     this._movements.push(val);
+//     return this;
+//   }
+
+//   withdraw(val) {
+//     this.deposit(-val);
+//     return this;
+//   }
+
+//   _approveLoan(val) {
+//     return true;
+//   }
+
+//   requestLoan(val) {
+//     if (this.approveLoan(val)) {
+//       this.deposit(val);
+//       console.log(`loan approved of ${this.val} cfa`);
+//       return this;
+//     }
+//   }
+// }
+
+// const acc1 = new Account('Joseph', 'CFA', 1111);
+// acc1.deposit(300).deposit(500).withdraw(50).requestLoan(300);
 // console.log(acc1.getMovements());
+// // acc1.deposit(250);
+// // acc1.withdraw(140);
+// // acc1._approveLoan(1323);
+// // acc1.requestLoan(1000);
 
-// console.log(acc1);
+// // console.log(acc1.getMovements());
 
-console.log(acc1._pin);
+// // console.log(acc1);
 
-acc
+// console.log(acc1._pin);
 
 // class Person {
 //   constructor(firstName, birthYear) {
