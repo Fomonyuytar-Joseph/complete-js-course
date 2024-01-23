@@ -23,7 +23,20 @@ const restaurant = {
       close: 24,
     },
   },
+
+  oderDelivery: function({mainIndex,starterIndex,time,address}){
+       console.log(
+         `order received ${this.starterMenu[starterIndex]} to ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+       );
+  }
 };
+
+restaurant.oderDelivery({
+  time:'22:30',
+  address:'buea',
+  mainIndex:2,
+  starterIndex:2,
+})
 
 
 
@@ -46,8 +59,8 @@ const  obj = {a:23,b:27,c:14};
 console.log(a,b);
 
 //nested objects
-
-
+const {fri:{open:o,close:c}}=openingHours;
+console.log(open,close);
 
 
 
