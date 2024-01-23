@@ -9,11 +9,34 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
 };
 
 
 
-console.log(restaurant.order(2, 0));
+const {name ,openingHours,categories} = restaurant;
+
+const {name:restaurantName,openingHours:hours,categories:tags}=restaurant
+
+const {menu=[],starterMenu:starters = []}=restaurant
+
+console.log(menu,starters);
+
+
+//Mutating variables
 
 
 
@@ -22,17 +45,5 @@ console.log(restaurant.order(2, 0));
 
 
 
-const arr = [1, 2, 3];
-const [x, y, z] = arr;
-console.log(x, y, z);
 
-let [main, , secondary] = restaurant.categories;
 
-console.log(main, secondary);
-[main, secondary] = [secondary, main];
-
-//  let temp = main;
-//   main = secondary;
-//   secondary = temp;
-
-console.log(main, secondary);
