@@ -1,5 +1,21 @@
 'use strict';
 
+
+const arr = [7 ,8 ,9];
+
+const newArr =[1,2,3 ,...arr];
+console.log(newArr);
+console.log(...newArr);
+
+
+//iterables
+const str = 'Joseph';
+
+const letters = [...str,'','S.']
+
+console.log(letters);
+
+
 const restaurant = {
   name: 'Classico Italiano',
   location: 'Via Angelo Tavanti 23, Firenze, Italy',
@@ -31,36 +47,40 @@ const restaurant = {
   }
 };
 
-restaurant.oderDelivery({
-  time:'22:30',
-  address:'buea',
-  mainIndex:2,
-  starterIndex:2,
-})
+const newResturant = { founded: 2000, ...restaurant, founder: 'joseph' };
+
+console.log(newResturant);
+
+// restaurant.oderDelivery({
+//   time:'22:30',
+//   address:'buea',
+//   mainIndex:2,
+//   starterIndex:2,
+// })
 
 
 
-const {name ,openingHours,categories} = restaurant;
+// const {name ,openingHours,categories} = restaurant;
 
-const {name:restaurantName,openingHours:hours,categories:tags}=restaurant
+// const {name:restaurantName,openingHours:hours,categories:tags}=restaurant
 
-const {menu=[],starterMenu:starters = []}=restaurant
+// const {menu=[],starterMenu:starters = []}=restaurant
 
-console.log(menu,starters);
+// console.log(menu,starters);
 
 
-//Mutating variables
-let a= 111;
-let b =999;
+// //Mutating variables
+// let a= 111;
+// let b =999;
 
-const  obj = {a:23,b:27,c:14};
+// const  obj = {a:23,b:27,c:14};
 
-({a,b}=obj)
-console.log(a,b);
+// ({a,b}=obj)
+// console.log(a,b);
 
-//nested objects
-const {fri:{open:o,close:c}}=openingHours;
-console.log(open,close);
+// //nested objects
+// const {fri:{open:o,close:c}}=openingHours;
+// console.log(open,close);
 
 
 
