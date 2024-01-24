@@ -1,19 +1,6 @@
 'use strict';
 
-
-const arr = [7 ,8 ,9];
-
-const newArr =[1,2,3 ,...arr];
-console.log(newArr);
-console.log(...newArr);
-
-
-//iterables
-const str = 'Joseph';
-
-const letters = [...str,'','S.']
-
-console.log(letters);
+;
 
 
 const restaurant = {
@@ -44,12 +31,60 @@ const restaurant = {
        console.log(
          `order received ${this.starterMenu[starterIndex]} to ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
        );
+  },
+  orderPizza: function(mainIng,...otherIng){
+                console.log(mainIng);
+                console.log(otherIng);
   }
 };
 
-const newResturant = { founded: 2000, ...restaurant, founder: 'joseph' };
+//spread because it is on the right hand side of the = operator
+const arr = [1,2,...[3,4]]
 
-console.log(newResturant);
+const [a,b,...others]= [1,2,3,4,5];
+
+console.log(others);
+
+   
+      const [pizza,,risotto,...otherFood]=[...restaurant.mainMenu,...restaurant.starterMenu]
+      console.log(pizza,risotto,otherFood);
+
+
+  //Objects
+  const {sat,...weekdays}= restaurant.openingHours;
+
+  console.log(weekdays);
+   
+//2) Functions
+const add = function(...numbers){
+console.log(numbers);
+let sum = 0;
+for(let num of numbers){
+  sum += num 
+}
+
+console.log(sum);
+}
+
+
+add(2,3)
+add(5,6,7,7,4)
+add(3,5,6,3,2,6,4)
+
+
+restaurant.orderPizza('mushrooms','onions','pizza')
+
+
+
+
+
+
+
+
+
+
+
+
 
 // restaurant.oderDelivery({
 //   time:'22:30',
