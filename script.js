@@ -48,8 +48,28 @@ const restaurant = {
   }
 };
 
+if (restaurant.openingHours.mon) {console.log(restaurant.openingHours.mon.open);}
+
+
+//with optional chaining
+console.log(restaurant.openingHours?.mon?.open);
 
  
+
+const days =['mon','tue','wed','thu','fri','sat','sun'];
+
+for (let day of days){
+  const open= restaurant.openingHours[day]?.open ?? 'closed'
+  console.log(`On ${day} we open at ${open}`);
+}
+
+
+//Arrays
+const users =[{name:'Jonas',email:'aL0fO@example.com'},{name:'Jessica',email:'jessica@a.com'}];
+
+
+
+console.log(users[2]?.name ?? 'User array empty');
 
   //three new ways to write objects in es6
 
