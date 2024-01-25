@@ -48,28 +48,69 @@ const restaurant = {
   }
 };
 
-if (restaurant.openingHours.mon) {console.log(restaurant.openingHours.mon.open);}
+
+// const properties = Object.keys(openingHours)
+
+// console.log(properties);
 
 
-//with optional chaining
-console.log(restaurant.openingHours?.mon?.open);
+// for(let day of Object.keys(openingHours)){
+// console.log(day);
+// }
 
- 
+// //property values
+// const objValues= Object.values(openingHours);
+// console.log(objValues);
 
-const days =['mon','tue','wed','thu','fri','sat','sun'];
 
-for (let day of days){
-  const open= restaurant.openingHours[day]?.open ?? 'closed'
-  console.log(`On ${day} we open at ${open}`);
+//entire object
+const entries = Object.entries(openingHours)
+// console.log(entries);
+
+for (const [key ,{open ,close}] of entries)
+{
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
 
 
-//Arrays
-const users =[{name:'Jonas',email:'aL0fO@example.com'},{name:'Jessica',email:'jessica@a.com'}];
 
 
 
-console.log(users[2]?.name ?? 'User array empty');
+
+
+
+
+
+
+
+
+
+
+
+
+
+// if (restaurant.openingHours.mon) {console.log(restaurant.openingHours.mon.open);}
+
+
+// //with optional chaining
+// console.log(restaurant.openingHours?.mon?.open);
+
+ 
+
+// const days =['mon','tue','wed','thu','fri','sat','sun'];
+
+// for (let day of days){
+//   const open= restaurant.openingHours[day]?.open ?? 'closed'
+//   console.log(`On ${day} we open at ${open}`);
+// }
+
+
+// //Arrays
+// const users =[{name:'Jonas',email:'aL0fO@example.com'},{name:'Jessica',email:'jessica@a.com'}];
+
+
+
+// console.log(users[2]?.name ?? 'User array empty');
 
   //three new ways to write objects in es6
 
