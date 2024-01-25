@@ -49,28 +49,36 @@ const restaurant = {
 };
 
 
-// const properties = Object.keys(openingHours)
+const playerSet = new Set(['Ronaldo','messi','Bale','kevin de bryune','messi','rodri','Ronaldo']);
 
-// console.log(properties);
-
-
-// for(let day of Object.keys(openingHours)){
-// console.log(day);
-// }
-
-// //property values
-// const objValues= Object.values(openingHours);
-// console.log(objValues);
+console.log(playerSet);
 
 
-//entire object
-const entries = Object.entries(openingHours)
-// console.log(entries);
+console.log(playerSet.size);
 
-for (const [key ,{open ,close}] of entries)
-{
-  console.log(`On ${key} we open at ${open} and close at ${close}`);
+//to check of it has a certain values
+console.log(playerSet.has('messi'));
+
+//to add an element
+playerSet.add('James')
+
+
+//to delete an element
+playerSet.delete('messi')
+
+//looping 0ver sets since tey are interables
+for (let player of playerSet){
+  console.log(player);
 }
+
+
+//example
+const staff = ['Waiter','Chef','Waiter','Manager','Chef','Waiter'];
+
+const staffUnique = [...new Set(staff)];
+
+console.log(staffUnique); 
+
 
 
 
