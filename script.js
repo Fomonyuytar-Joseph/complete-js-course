@@ -81,4 +81,14 @@ let arr = ['a','b','c','d','e']
 console.log(arr.at(0));
 console.log('joseph'.at(0));
 
+function filter_list(l) {
+  let filtered_array = l.filter(item => typeof item === 'number');
+  return filtered_array
+}
 
+const a = 3
+console.log(typeof a);
+
+
+console.log(filter_list([1, 'a', 'b', 0, 15]));
+console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
