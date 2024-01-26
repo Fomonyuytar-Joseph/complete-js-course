@@ -1,132 +1,83 @@
 'use strict';
 
- const openingHours = {
-   thu: {
-     open: 12,
-     close: 22,
-   },
-   fri: {
-     open: 11,
-     close: 23,
-   },
-   sat: {
-     open: 0, // Open 24 hours
-     close: 24,
-   },
- };
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// BANKIST APP
 
-
-
-
-
-
-const restaurant = {
-  name: 'Classico Italiano',
-  location: 'Via Angelo Tavanti 23, Firenze, Italy',
-  categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-  mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-
-
-  //es6 enhanced object literals
-  openingHours,
-
-  oderDelivery: function({mainIndex,starterIndex,time,address}){
-       console.log(
-         `order received ${this.starterMenu[starterIndex]} to ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
-       );
-  },
-
-
-  //es6 enhanced object literals to write methods
-  orderPizza(mainIng,...otherIng){
-                console.log(mainIng);
-                console.log(otherIng);
-  }
+// Data
+const account1 = {
+  owner: 'Jonas Schmedtmann',
+  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  interestRate: 1.2, // %
+  pin: 1111,
 };
 
+const account2 = {
+  owner: 'Jessica Davis',
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  interestRate: 1.5,
+  pin: 2222,
+};
 
-const playerSet = new Set(['Ronaldo','messi','Bale','kevin de bryune','messi','rodri','Ronaldo']);
+const account3 = {
+  owner: 'Steven Thomas Williams',
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+  interestRate: 0.7,
+  pin: 3333,
+};
 
-console.log(playerSet);
+const account4 = {
+  owner: 'Sarah Smith',
+  movements: [430, 1000, 700, 50, 90],
+  interestRate: 1,
+  pin: 4444,
+};
 
+const accounts = [account1, account2, account3, account4];
 
-console.log(playerSet.size);
+// Elements
+// const labelWelcome = document.querySelector('.welcome');
+// const labelDate = document.querySelector('.date');
+// const labelBalance = document.querySelector('.balance__value');
+// const labelSumIn = document.querySelector('.summary__value--in');
+// const labelSumOut = document.querySelector('.summary__value--out');
+// const labelSumInterest = document.querySelector('.summary__value--interest');
+// const labelTimer = document.querySelector('.timer');
 
-//to check of it has a certain values
-console.log(playerSet.has('messi'));
+// const containerApp = document.querySelector('.app');
+// const containerMovements = document.querySelector('.movements');
 
-//to add an element
-playerSet.add('James')
+// const btnLogin = document.querySelector('.login__btn');
+// const btnTransfer = document.querySelector('.form__btn--transfer');
+// const btnLoan = document.querySelector('.form__btn--loan');
+// const btnClose = document.querySelector('.form__btn--close');
+// const btnSort = document.querySelector('.btn--sort');
 
+// const inputLoginUsername = document.querySelector('.login__input--user');
+// const inputLoginPin = document.querySelector('.login__input--pin');
+// const inputTransferTo = document.querySelector('.form__input--to');
+// const inputTransferAmount = document.querySelector('.form__input--amount');
+// const inputLoanAmount = document.querySelector('.form__input--loan-amount');
+// const inputCloseUsername = document.querySelector('.form__input--user');
+// const inputClosePin = document.querySelector('.form__input--pin');
 
-//to delete an element
-playerSet.delete('messi')
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+// LECTURES
 
-//looping 0ver sets since tey are interables
-for (let player of playerSet){
-  console.log(player);
-}
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
 
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-//example
-const staff = ['Waiter','Chef','Waiter','Manager','Chef','Waiter'];
-
-const staffUnique = [...new Set(staff)];
-
-console.log(staffUnique); 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if (restaurant.openingHours.mon) {console.log(restaurant.openingHours.mon.open);}
-
-
-// //with optional chaining
-// console.log(restaurant.openingHours?.mon?.open);
-
- 
-
-// const days =['mon','tue','wed','thu','fri','sat','sun'];
-
-// for (let day of days){
-//   const open= restaurant.openingHours[day]?.open ?? 'closed'
-//   console.log(`On ${day} we open at ${open}`);
-// }
-
-
-// //Arrays
-// const users =[{name:'Jonas',email:'aL0fO@example.com'},{name:'Jessica',email:'jessica@a.com'}];
+/////////////////////////////////////////////////
 
 
+let arr = ['a','b','c','d','e']
 
-// console.log(users[2]?.name ?? 'User array empty');
-
-  //three new ways to write objects in es6
-
-
-
-
-
-
-
+console.log(arr.at(0));
 
 
