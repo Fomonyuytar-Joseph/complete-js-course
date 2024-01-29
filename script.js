@@ -76,19 +76,52 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 /////////////////////////////////////////////////
 
 
-let arr = ['a','b','c','d','e']
 
-console.log(arr.at(0));
-console.log('joseph'.at(0));
-
-function filter_list(l) {
-  let filtered_array = l.filter(item => typeof item === 'number');
-  return filtered_array
-}
-
-const a = 3
-console.log(typeof a);
+// for(const movement of movements){
+//   if(movement>0){
+//     console.log(`you deposited ${movement}`);
+//   }else{
+//        console.log(`you withdrew ${movement}`);
+//   }
+// }
 
 
-console.log(filter_list([1, 'a', 'b', 0, 15]));
-console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
+
+// for(const [i, movement] of movements.entries()){
+//       if(movement>0){
+//       console.log(`you deposited ${movement}`);
+//     }else{
+//          console.log(`you withdrew ${movement}`);
+//     }
+// }
+
+
+movements.forEach(function(movement,i){
+    if(movement>0){
+    console.log(`you deposited ${i + 1} ${movement}`);
+  }else{
+       console.log(`you withdrew  ${i + 1 } ${movement}`);
+  }
+
+})
+
+
+//for each method to acheive it also
+
+
+// let arr = ['a','b','c','d','e']
+
+// console.log(arr.at(0));
+// console.log('joseph'.at(0));
+
+// function filter_list(l) {
+//   let filtered_array = l.filter(item => typeof item === 'number');
+//   return filtered_array
+// }
+
+// const a = 3
+// console.log(typeof a);
+
+
+// console.log(filter_list([1, 'a', 'b', 0, 15]));
+// console.log(filter_list([1, 2, 'aasf', '1', '123', 123]));
