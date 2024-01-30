@@ -86,3 +86,32 @@ displayMovements(account1.movements)
 /////////////////////////////////////////////////
 
 
+
+//coding challenge
+
+const checkDogs= (firstArr,secondArr)=>{
+  let firstDogArr = firstArr.slice(1,3)
+  let secondDogArr = secondArr.slice(1,3)
+
+
+
+   firstDogArr.forEach((dog, index)=>{
+      let  age= dog >=3 ? 'is an adult':'is still a puppy'
+      let message = `The dog number ${index+1} ${age} and is ${dog} years old`  
+       console.log(message);    
+   })
+   secondDogArr.forEach((dog,index)=>{
+           let age = dog >= 3 ? 'is an adult' : 'is still a puppy';
+           let message = `The dog number ${
+             index + 1
+           } ${age} and is ${dog} years old`;
+           console.log(message);  
+   })
+
+  // console.log(firstDogArr,secondDogArr);
+  // console.log(firstArr,secondArr);
+}
+
+
+checkDogs([3,5,2,12,7],[4,1,15,8,3])
+
