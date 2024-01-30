@@ -84,34 +84,73 @@ displayMovements(account1.movements)
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const euroToUsd = 1.1;
+const movementsUSD = movements.map(mov => {
+  return mov * euroToUsd;
+});
+
+
+console.log(movements); 
+console.log(movementsUSD);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 //coding challenge
 
-const checkDogs= (firstArr,secondArr)=>{
-  let firstDogArr = firstArr.slice(1,3)
-  let secondDogArr = secondArr.slice(1,3)
+// const checkDogs= (firstArr,secondArr)=>{
+//   let firstDogArr = firstArr.slice(1,3)
+//   let secondDogArr = secondArr.slice(1,3)
 
 
 
-   firstDogArr.forEach((dog, index)=>{
-      let  age= dog >=3 ? 'is an adult':'is still a puppy'
-      let message = `The dog number ${index+1} ${age} and is ${dog} years old`  
-       console.log(message);    
-   })
-   secondDogArr.forEach((dog,index)=>{
-           let age = dog >= 3 ? 'is an adult' : 'is still a puppy';
-           let message = `The dog number ${
-             index + 1
-           } ${age} and is ${dog} years old`;
-           console.log(message);  
-   })
+//    firstDogArr.forEach((dog, index)=>{
+//       let  age= dog >=3 ? 'is an adult':'is still a puppy'
+//       let message = `The dog number ${index+1} ${age} and is ${dog} years old`  
+//        console.log(message);    
+//    })
+//    secondDogArr.forEach((dog,index)=>{
+//            let age = dog >= 3 ? 'is an adult' : 'is still a puppy';
+//            let message = `The dog number ${
+//              index + 1
+//            } ${age} and is ${dog} years old`;
+//            console.log(message);  
+//    })
 
-  // console.log(firstDogArr,secondDogArr);
-  // console.log(firstArr,secondArr);
-}
+//   // console.log(firstDogArr,secondDogArr);
+//   // console.log(firstArr,secondArr);
+// }
 
 
-checkDogs([3,5,2,12,7],[4,1,15,8,3])
+// checkDogs([3,5,2,12,7],[4,1,15,8,3])
 
