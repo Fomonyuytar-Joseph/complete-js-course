@@ -82,18 +82,37 @@ movements.forEach(function(mov,i){
 
 displayMovements(account1.movements)
 
+
+const createUsernames = function (accs){
+  accs.forEach(function (acc){
+    acc.username = acc.owner
+      .toUpperCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+
+    
+  })
+   
+}
+
+
+console.log(createUsernames(accounts));
+console.log(accounts);
+
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const euroToUsd = 1.1;
-const movementsUSD = movements.map(mov => {
-  return mov * euroToUsd;
-});
+// const euroToUsd = 1.1;
+// const movementsUSD = movements.map(mov => {
+//   return mov * euroToUsd;
+// });
 
 
-console.log(movements); 
-console.log(movementsUSD);
+// console.log(movements); 
+// console.log(movementsUSD);
 
 
 
