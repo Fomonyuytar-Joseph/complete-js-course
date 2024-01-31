@@ -61,89 +61,58 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-
-
-const displayMovements= function(movements){
-movements.forEach(function(mov,i){
-  const type = mov > 0 ? 'deposit':'withdrawal'
-  // template literals
-  const html = ` <div class="movements__row">
+const displayMovements = function (movements) {
+  movements.forEach(function (mov, i) {
+    const type = mov > 0 ? 'deposit' : 'withdrawal';
+    // template literals
+    const html = ` <div class="movements__row">
           <div class="movements__type movements__type--${type}">${
-    i + 1
-  } ${type}</div>
+      i + 1
+    } ${type}</div>
           <div class="movements__value">${mov}</div>
         </div>`;
 
+    containerMovements.insertAdjacentHTML('afterbegin', html);
+  });
+};
 
-        containerMovements.insertAdjacentHTML('afterbegin',html)
-})
-}
+displayMovements(account1.movements);
 
-
-displayMovements(account1.movements)
-
-
-const createUsernames = function (accs){
-  accs.forEach(function (acc){
+const createUsernames = function (accs) {
+  accs.forEach(function (acc) {
     acc.username = acc.owner
       .toUpperCase()
       .split(' ')
       .map(name => name[0])
       .join('');
-
-    
-  })
-   
-}
-
+  });
+};
 
 console.log(createUsernames(accounts));
 console.log(accounts);
 
-
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+const balance = movements.reduce((acc,cur,i,arr)=>{return acc + cur},0)
+
+console.log(balance);
+
+// const deposits = movements.filter(mov => mov > 0);
+
+// console.log(deposits);
+
+// const withdrawals = movements.filter(mov => mov < 0);
+
+// console.log(withdrawals);
 // const euroToUsd = 1.1;
 // const movementsUSD = movements.map(mov => {
 //   return mov * euroToUsd;
 // });
 
-
-// console.log(movements); 
+// console.log(movements);
 // console.log(movementsUSD);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //coding challenge
 
@@ -151,25 +120,21 @@ console.log(accounts);
 //   let firstDogArr = firstArr.slice(1,3)
 //   let secondDogArr = secondArr.slice(1,3)
 
-
-
 //    firstDogArr.forEach((dog, index)=>{
 //       let  age= dog >=3 ? 'is an adult':'is still a puppy'
-//       let message = `The dog number ${index+1} ${age} and is ${dog} years old`  
-//        console.log(message);    
+//       let message = `The dog number ${index+1} ${age} and is ${dog} years old`
+//        console.log(message);
 //    })
 //    secondDogArr.forEach((dog,index)=>{
 //            let age = dog >= 3 ? 'is an adult' : 'is still a puppy';
 //            let message = `The dog number ${
 //              index + 1
 //            } ${age} and is ${dog} years old`;
-//            console.log(message);  
+//            console.log(message);
 //    })
 
 //   // console.log(firstDogArr,secondDogArr);
 //   // console.log(firstArr,secondArr);
 // }
 
-
 // checkDogs([3,5,2,12,7],[4,1,15,8,3])
-
