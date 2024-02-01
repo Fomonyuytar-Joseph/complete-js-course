@@ -115,6 +115,15 @@ if(acc > mov){
 
 console.log(max);
 
+var person = {
+  name: 'Nicholas',
+  sayName: function () {
+    console.log(this.name);
+  },
+}; 
+
+person.sayName(); 
+
 
 
 // const deposits = movements.filter(mov => mov > 0);
