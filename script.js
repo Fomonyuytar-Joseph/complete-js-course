@@ -89,79 +89,29 @@ calcDisplayBalance(account1.movements)
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
     acc.username = acc.owner
-      .toUpperCase()
+      .toLowerCase()
       .split(' ')
       .map(name => name[0])
       .join('');
   });
 };
 
-console.log(createUsernames(accounts));
-// console.log(accounts);
+createUsernames(accounts);
+console.log(accounts);
 
+//Event handler
+let currentAcount;
+btnLogin.addEventListener('click',function(e){
+    e.preventDefault();
+  currentAcount =  accounts.find(acc => acc.username === inputLoginUsername.value)
+  console.log(currentAcount);
+
+  if(currentAcount?.pin === Number(inputLoginPin.value)){
+    console.log('I am logged in');
+  }
+})
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const max = movements.reduce((acc, mov, i, arr) => {
-if(acc > mov){
-  return acc;
-}else {
-  return mov
-}
-}, movements[0]);
-
-
-console.log(max);
-
-var person = {
-  name: 'Nicholas',
-  sayName: function () {
-    console.log(this.name);
-  },
-}; 
-
-person.sayName(); 
-
-
-
-// const deposits = movements.filter(mov => mov > 0);
-
-// console.log(deposits);
-
-// const withdrawals = movements.filter(mov => mov < 0);
-
-// console.log(withdrawals);
-// const euroToUsd = 1.1;
-// const movementsUSD = movements.map(mov => {
-//   return mov * euroToUsd;
-// });
-
-// console.log(movements);
-// console.log(movementsUSD);
-
-//coding challenge
-
-// const checkDogs= (firstArr,secondArr)=>{
-//   let firstDogArr = firstArr.slice(1,3)
-//   let secondDogArr = secondArr.slice(1,3)
-
-//    firstDogArr.forEach((dog, index)=>{
-//       let  age= dog >=3 ? 'is an adult':'is still a puppy'
-//       let message = `The dog number ${index+1} ${age} and is ${dog} years old`
-//        console.log(message);
-//    })
-//    secondDogArr.forEach((dog,index)=>{
-//            let age = dog >= 3 ? 'is an adult' : 'is still a puppy';
-//            let message = `The dog number ${
-//              index + 1
-//            } ${age} and is ${dog} years old`;
-//            console.log(message);
-//    })
-
-//   // console.log(firstDogArr,secondDogArr);
-//   // console.log(firstArr,secondArr);
-// }
-
-// checkDogs([3,5,2,12,7],[4,1,15,8,3])
