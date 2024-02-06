@@ -76,7 +76,6 @@ const displayMovements = function (movements) {
   });
 };
 
-
 const calcDisplayBalance = movements => {
   const balance = movements.reduce((acc, cur) => acc + cur, 0);
 
@@ -92,7 +91,6 @@ const createUsernames = function (accs) {
       .join('');
   });
 };
-
 
 const calcDisplaySummary = function (acc) {
   const incomes = acc.movements
@@ -135,20 +133,19 @@ btnLogin.addEventListener('click', function (e) {
   }
   containerApp.style.opacity = 100;
 
+  //clear input fields
+  inputLoginUsername.value = inputLoginPin.value = '';
+  //make the field lose it focus
+  inputLoginPin.blur();
+
   //display movements
-displayMovements(currentAcount.movements);
-
-
+  displayMovements(currentAcount.movements);
 
   //display balance
-    calcDisplayBalance(currentAcount.movements);
+  calcDisplayBalance(currentAcount.movements);
 
-
-    //display summary
-    calcDisplaySummary(currentAcount.movements); 
-    
-
-  
+  //display summary
+  calcDisplaySummary(currentAcount);
 });
 
 /////////////////////////////////////////////////
