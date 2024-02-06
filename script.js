@@ -76,15 +76,12 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
 
 const calcDisplayBalance = movements => {
   const balance = movements.reduce((acc, cur) => acc + cur, 0);
 
   labelBalance.textContent = `${balance} CFA`;
 };
-
-calcDisplayBalance(account1.movements)
 
 const createUsernames = function (accs) {
   accs.forEach(function (acc) {
@@ -96,22 +93,64 @@ const createUsernames = function (accs) {
   });
 };
 
+
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+
+  const out = acc.movements
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(out)}€`;
+
+  const interest = acc.movements
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * acc.interestRate) / 100)
+    .filter((int, i, arr) => {
+      // console.log(arr);
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest}€`;
+};
+
 createUsernames(accounts);
 console.log(accounts);
 
 //Event handler
 let currentAcount;
-btnLogin.addEventListener('click',function(e){
-    e.preventDefault();
-  currentAcount =  accounts.find(acc => acc.username === inputLoginUsername.value)
+btnLogin.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAcount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
   console.log(currentAcount);
 
-  if(currentAcount?.pin === Number(inputLoginPin.value)){
-    console.log('I am logged in');
+  if (currentAcount?.pin === Number(inputLoginPin.value)) {
+    labelWelcome.textContent = `Welcome to ${
+      currentAcount.owner.split(' ')[0]
+    }`;
   }
-})
+  containerApp.style.opacity = 100;
+
+  //display movements
+displayMovements(currentAcount.movements);
+
+
+
+  //display balance
+    calcDisplayBalance(currentAcount.movements);
+
+
+    //display summary
+    calcDisplaySummary(currentAcount.movements); 
+    
+
+  
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
-
