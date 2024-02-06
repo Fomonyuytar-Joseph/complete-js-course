@@ -116,6 +116,19 @@ const calcDisplaySummary = function (acc) {
 
 createUsernames(accounts);
 
+
+
+const updateUI = function(acc){
+  //display movements
+  displayMovements(acc.movements);
+
+  //display balance
+  calcDisplayBalance(acc);
+
+  //display summary
+  calcDisplaySummary(acc);
+}
+
 //Event handler
 let currentAcount;
 btnLogin.addEventListener('click', function (e) {
@@ -155,12 +168,15 @@ btnTransfer.addEventListener('click',function(e){
   const receiverAcc = accounts.find(
     acc => acc.username === inputTransferTo.value
   );
-  if(amount> 0 && currentAcount.balance >= amount && receiverAcc.username !== currentAcount.username){
-
+  if(amount> 0 && receiverAcc && currentAcount.balance >= amount && receiverAcc.username !== currentAcount.username){
+    console.log('transfer valid');
   }
 
-  console.log(amount, receiverAcc);
+currentAcount.movements.push(-amount);
+receiverAcc.movements.push(amount);
 
+//update UI
+updateUI(currentAcount)
 })
 
 /////////////////////////////////////////////////
