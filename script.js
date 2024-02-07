@@ -207,5 +207,10 @@ btnClose.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
+
+const anyDeposits = movements.some(mov => mov > 300)
+
+console.log(anyDeposits);
+
 console.log(movements.includes(200));
 
