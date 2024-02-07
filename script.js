@@ -183,6 +183,17 @@ updateUI(currentAcount);
 
 })
 
+btnClose.addEventListener('click',function(e){
+  e.preventDefault();
+  if(inputCloseUsername.value ===currentAcount.username && Number(inputClosePin.value) === currentAcount.pin ){
+    let index = accounts.findIndex((acc)=> acc.username ===currentAcount.username)
+    // accounts.splice(index , 1);
+    console.log(index);
+
+  }
+  
+
+})
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
