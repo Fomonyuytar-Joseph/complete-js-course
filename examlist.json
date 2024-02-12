@@ -1,0 +1,74 @@
+{
+  "examList": [
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "01",
+      "yearId": 1,
+      "examMark":53
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "02",
+      "yearId": 1,
+      "examMark":24
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "03",
+      "yearId": 1,
+      "examMark":64
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "04",
+      "yearId": 1,
+      "examMark":49
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "05",
+      "yearId": 1,
+      "examMark":44
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "06",
+      "yearId": 1,
+      "examMark":66
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "07",
+      "yearId": 1,
+      "examMark":18
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "08",
+      "yearId": 1,
+      "examMark":3
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "09",
+      "yearId": 1,
+      "examMark":56
+    },
+    {
+      "courseId": 1,
+      "semesterId": 1,
+      "studentCode": "10",
+      "yearId": 1,
+      "examMark":4
+    }
+  ]
+}

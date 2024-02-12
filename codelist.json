@@ -1,0 +1,75 @@
+{
+"codeList":[
+  {
+    "courseId": 1,
+    "studentId": 1,
+    "semesterId": 1,
+    "studentCode": "01",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 2,
+    "semesterId": 1,
+    "studentCode": "02",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 3,
+    "semesterId": 1,
+    "studentCode": "03",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 4,
+    "semesterId": 1,
+    "studentCode": "04",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 5,
+    "semesterId": 1,
+    "studentCode": "05",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 6,
+    "semesterId": 1,
+    "studentCode": "06",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 7,
+    "semesterId": 1,
+    "studentCode": "07",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 8,
+    "semesterId": 1,
+    "studentCode": "08",
+    "yearId": 1
+  },
+  {
+    "courseId": 1,
+    "studentId": 9,
+    "semesterId": 1,
+    "studentCode": "09",
+    "yearId": 1
+  },
+   {
+    "courseId": 1,
+    "studentId": 10,
+    "semesterId": 1,
+    "studentCode": "10",
+    "yearId": 1
+  }
+]
+
+}

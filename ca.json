@@ -1,0 +1,74 @@
+{
+  "caList": [
+    {
+      "studentId": 1,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 29,
+      "yearId": 1
+    },
+    {
+      "studentId": 2,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 15,
+      "yearId": 1
+    },
+    {
+      "studentId": 3,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 29,
+      "yearId": 1
+    },
+    {
+      "studentId": 4,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 17,
+      "yearId": 1
+    },
+    {
+      "studentId": 5,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 17,
+      "yearId": 1
+    },
+    {
+      "studentId": 6,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 25,
+      "yearId": 1
+    },
+    {
+      "studentId": 7,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 20,
+      "yearId": 1
+    },
+    {
+      "studentId": 8,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 29,
+      "yearId": 1
+    },
+    {
+      "studentId": 9,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 24,
+      "yearId": 1
+    },
+    {
+      "studentId": 10,
+      "courseId": 1,
+      "semesterId": 1,
+      "caMark": 27,
+      "yearId": 1
+    }
+  ]
+}

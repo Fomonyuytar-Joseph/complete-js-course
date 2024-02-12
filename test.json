@@ -1,0 +1,79 @@
+[
+    {
+      "email": "iv@tafodsit.nu",
+      "matricule": "FE19A0011",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Katie",
+      "lastName": "Curry"
+    },
+    {
+      "email": "bazitral@pujodazo.so",
+      "matricule": "FE19A005",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Charlotte",
+      "lastName": "Moss"
+    },
+    {
+      "email": "cazur@rib.gy",
+      "matricule": "FE19A003",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Mina",
+      "lastName": "Parks"
+    },
+    {
+      "email": "mi@ho.tj",
+      "matricule": "FE19A007",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Tom",
+      "lastName": "Tyler"
+    },
+    {
+      "email": "hetulgu@zu.as",
+      "matricule": "FE19A008",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Emily",
+      "lastName": "Berry"
+    },
+    {
+      "email": "igo@hiivo.er",
+      "matricule": "FE19A004",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Jesse",
+      "lastName": "Fowler"
+    },
+    {
+      "email": "keg@idna.me",
+      "matricule": "FE19A0010",
+      "levelId": 1,
+      "yearId": 1,
+      "facultyId": 1,
+      "departmentId": 1,
+      "roleId": 6,
+      "firstName": "Kameni",
+      "lastName": "Herrera"
+    }
+]
