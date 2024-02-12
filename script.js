@@ -180,8 +180,6 @@ const accounts = [account1, account2, account3, account4];
 //   }
 // });
 
-
-
 // btnLoan.addEventListener('click', function (e) {
 //     e.preventDefault();
 //     const amount = Number(inputLoanAmount.value);
@@ -221,21 +219,16 @@ const accounts = [account1, account2, account3, account4];
 /////////////////////////////////////////////////
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-
 // const anyDeposits = movements.some(mov => mov > 300)
 
 // console.log(anyDeposits);
 
 // console.log(movements.includes(200));
 
-
-
 // //every method
 // console.log(movements.every(mov=> mov > 0));
 
 // console.log(account4.movements.every(mov=>mov>0));
-
-
 
 // //seperate callback
 // const deposit = mov => mov > 0;
@@ -243,26 +236,20 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // console.log(movements.every(deposit));
 // console.log(movements.filter(deposit));
 
-
-
 //flat
-const arr = [[1,2,3],[4,5,6],7,8]
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 
 console.log(arr.flat());
 
-
-const arrDeep = [[[1,2],3],[4,[5],6],7,8];
+const arrDeep = [[[1, 2], 3], [4, [5], 6], 7, 8];
 
 console.log(arrDeep.flat(2));
 
-
-
-const accountMovements = accounts.map(acc=>acc.movements);
+const accountMovements = accounts.map(acc => acc.movements);
 console.log(accountMovements);
 
-const allMovements =accountMovements.flat();
+const allMovements = accountMovements.flat();
 console.log(allMovements);
 
-
-const overalBalance = allMovements.reduce((acc,mov)=> acc+mov,0);
+const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance);
