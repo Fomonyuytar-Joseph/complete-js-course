@@ -249,6 +249,15 @@ btnSort.addEventListener('click', function (e) {
 // //descending order
 // console.log(movements.sort((a,b)=>b-a));
 
-const x = new Array(7);
-x.fill(4);
-console.log(x);
+// const x = new Array(7);
+// x.fill(1,3,5);
+// console.log(x);
+
+
+//Array.from
+const y =Array.from({length:7},()=>1 )
+console.log(y);
+
+// _ is a throw a way value
+const z = Array.from({ length: 7 }, (_,i) => i+1);
+console.log(z);
