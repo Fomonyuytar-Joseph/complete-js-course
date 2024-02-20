@@ -61,10 +61,8 @@ const inputLoanAmount = document.querySelector('.form__input--loan-amount');
 const inputCloseUsername = document.querySelector('.form__input--user');
 const inputClosePin = document.querySelector('.form__input--pin');
 
-const displayMovements = function (movements , sort = false) {
-
-     const movs = sort ? movements.slice().sort((a,b)=> a-b):movements
-
+const displayMovements = function (movements, sort = false) {
+  const movs = sort ? movements.slice().sort((a, b) => a - b) : movements;
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
@@ -185,15 +183,15 @@ btnTransfer.addEventListener('click', function (e) {
 });
 
 btnLoan.addEventListener('click', function (e) {
-    e.preventDefault();
-    const amount = Number(inputLoanAmount.value);
-    if(amount > 0 && currentAcount.movements.some(mov=>mov >= amount*0.1)){
-      //add movement
-      currentAcount.movements.push(amount);
-      //update UI
-      updateUI(currentAcount);
-      inputLoanAmount.value = inputLoanAmount.value = '';
-    }
+  e.preventDefault();
+  const amount = Number(inputLoanAmount.value);
+  if (amount > 0 && currentAcount.movements.some(mov => mov >= amount * 0.1)) {
+    //add movement
+    currentAcount.movements.push(amount);
+    //update UI
+    updateUI(currentAcount);
+    inputLoanAmount.value = inputLoanAmount.value = '';
+  }
 });
 
 btnClose.addEventListener('click', function (e) {
@@ -214,10 +212,8 @@ btnClose.addEventListener('click', function (e) {
     containerApp.style.opacity = 0;
   }
 
-      inputCloseUsername.value = inputClosePin.value = '';
-
+  inputCloseUsername.value = inputClosePin.value = '';
 });
-
 
 let sorted = false;
 
@@ -225,24 +221,21 @@ btnSort.addEventListener('click', function (e) {
   e.preventDefault();
   displayMovements(currentAcount.movements, !sorted);
   sorted = !sorted;
-}); 
-
-
+});
 
 // console.log(accounts);
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-
-const owners = ['Jonas','Zach','Adam','Martha']
-console.log(owners.sort());
-console.log(movements);
+// const owners = ['Jonas','Zach','Adam','Martha']
+// console.log(owners.sort());
+// console.log(movements);
 //sort array in ascending order(from small to large numbers)
 //return < 0 A will come before B(keep order)
 //return > 0 B will come before A(switch order)
 
-//ascending order                                                                                                                                                                  
+//ascending order
 // console.log(movements.sort((a,b)=>{
 // if(a>b){
 //   return 1
@@ -251,10 +244,11 @@ console.log(movements);
 //   return -1
 // }
 // }));
-console.log(movements.sort((a,b)=>a-b));
+// console.log(movements.sort((a,b)=>a-b));
 
+// //descending order
+// console.log(movements.sort((a,b)=>b-a));
 
-
-//descending order
-console.log(movements.sort((a,b)=>b-a));
-
+const x = new Array(7);
+x.fill(4);
+console.log(x);
