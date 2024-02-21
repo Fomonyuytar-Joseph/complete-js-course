@@ -2,6 +2,79 @@
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
+//Functions
+//default parameters
+
+let bookings = [];
+const createBooking = function(flightNum  ,numPassengers=1,price=199){
+   const booking = {flightNum,numPassengers,price}
+   console.log(booking);
+   bookings.push(booking)
+}
+
+createBooking('LH123',undefined,20)
+
+
+const flight = 'LH123'
+const joseph ={
+    name:'joseph',
+    passport:23244543535,
+}
+
+
+const checkIn=function(flightNum,passenger){
+flightNum = 'LH99';
+passenger.name= 'Mr ' + passenger.name;
+if (passenger.passport === 23244543535) {
+    alert('check in')
+}
+else{
+    alert('wrong passport')
+}
+}
+
+//flight is a primitive(string) type,flightNum is just a copy and not the original value
+//flightNum is a completely different varaible
+//josph object was affected by the change ,when we pass a reference to a function itrefernces it in the 
+//memory heap and both point to the same object in memory
+checkIn(flight ,joseph)
+
+console.log(flight);
+console.log(joseph);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // BANKIST APP
 
 // Data
