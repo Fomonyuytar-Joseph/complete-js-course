@@ -278,8 +278,23 @@ const camairco ={
     iataCode:'LH',
     bookings:[],
     book(flightNum,name){
-         console.log(`${name} booked seat on ${this.airline} flight ${this.iataCode} ${flightNum} `)
+         console.log(`${name} booked seat on ${this.airline} flight ${this.iataCode} ${flightNum} `);
+         this.bookings.push({
+             flight:`${this.iataCode} ${flightNum}`, name
+         })
     }
 }
 
 camairco.book(234,'Joseph')
+
+const turkishairways ={
+    airline:'TurkishAirways',
+    iataCode:'TA',
+    bookings: [],
+
+}
+
+
+const book = camairco.book;
+book.call(turkishairways,23,'Serena Williams')
+console.log(turkishairways)
