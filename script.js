@@ -273,35 +273,35 @@
 // greetHey('Joseph')
 // greet('Good evening')('James')
 
-const camairco ={
-    airline:'Camairco',
-    iataCode:'LH',
-    bookings:[],
-    book(flightNum,name){
-         console.log(`${name} booked seat on ${this.airline} flight ${this.iataCode} ${flightNum} `);
-         this.bookings.push({
-             flight:`${this.iataCode} ${flightNum}`, name
-         })
-    }
-}
+const camairco = {
+  airline: 'Camairco',
+  iataCode: 'LH',
+  bookings: [],
+  book(flightNum, name) {
+    console.log(
+      `${name} booked seat on ${this.airline} flight ${this.iataCode} ${flightNum} `
+    );
+    this.bookings.push({
+      flight: `${this.iataCode} ${flightNum}`,
+      name,
+    });
+  },
+};
 
-camairco.book(234,'Joseph')
+camairco.book(234, 'Joseph');
 
-const turkishairways ={
-    airline:'TurkishAirways',
-    iataCode:'TA',
-    bookings: [],
-
-}
-
+const turkishairways = {
+  airline: 'TurkishAirways',
+  iataCode: 'TA',
+  bookings: [],
+};
 
 const book = camairco.book;
-book.call(turkishairways,23,'Serena Williams')
-console.log(turkishairways)
+book.call(turkishairways, 23, 'Serena Williams');
+console.log(turkishairways);
 
-const bookTA = book.bind(turkishairways)
-bookTA(23454 ,'Steven Jones')
+const bookTA = book.bind(turkishairways);
+bookTA(23454, 'Steven Jones');
 
-
-const bookTA23 = book.bind(turkishairways, 23)
-bookTA23('Matha Cooper')
+const bookTA23 = book.bind(turkishairways, 23);
+bookTA23('Matha Cooper');
