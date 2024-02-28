@@ -298,3 +298,10 @@ const turkishairways ={
 const book = camairco.book;
 book.call(turkishairways,23,'Serena Williams')
 console.log(turkishairways)
+
+const bookTA = book.bind(turkishairways)
+bookTA(23454 ,'Steven Jones')
+
+
+const bookTA23 = book.bind(turkishairways, 23)
+bookTA23('Matha Cooper')
