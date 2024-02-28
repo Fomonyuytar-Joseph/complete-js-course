@@ -5,76 +5,6 @@
 //Functions
 //default parameters
 
-let bookings = [];
-const createBooking = function(flightNum  ,numPassengers=1,price=199){
-   const booking = {flightNum,numPassengers,price}
-   console.log(booking);
-   bookings.push(booking)
-}
-
-createBooking('LH123',undefined,20)
-
-
-const flight = 'LH123'
-const joseph ={
-    name:'joseph',
-    passport:23244543535,
-}
-
-
-const checkIn=function(flightNum,passenger){
-flightNum = 'LH99';
-passenger.name= 'Mr ' + passenger.name;
-if (passenger.passport === 23244543535) {
-    alert('check in')
-}
-else{
-    alert('wrong passport')
-}
-}
-
-//flight is a primitive(string) type,flightNum is just a copy and not the original value
-//flightNum is a completely different varaible
-//josph object was affected by the change ,when we pass a reference to a function itrefernces it in the 
-//memory heap and both point to the same object in memory
-checkIn(flight ,joseph)
-
-console.log(flight);
-console.log(joseph);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // BANKIST APP
 
 // Data
@@ -326,7 +256,6 @@ console.log(joseph);
 // x.fill(1,3,5);
 // console.log(x);
 
-
 //Array.from
 // const y =Array.from({length:7},()=>1 )
 // console.log(y);
@@ -334,3 +263,23 @@ console.log(joseph);
 // // _ is a throw a way value
 // const z = Array.from({ length: 7 }, (_,i) => i+1);
 // console.log(z);
+// const greet = function(greeting){
+//     return function(name){
+//         console.log(` ${greeting} ${name}`)
+//     }
+// }
+//
+// const greetHey = greet('Hey')
+// greetHey('Joseph')
+// greet('Good evening')('James')
+
+const camairco ={
+    airline:'Camairco',
+    iataCode:'LH',
+    bookings:[],
+    book(flightNum,name){
+         console.log(`${name} booked seat on ${this.airline} flight ${this.iataCode} ${flightNum} `)
+    }
+}
+
+camairco.book(234,'Joseph')
